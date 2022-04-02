@@ -1,0 +1,33 @@
+package httpErrors
+
+import "errors"
+
+var (
+	ContentTypeError           = errors.New("Content-Type must be `application/json`")
+	CannotDecodeError          = errors.New("Can not decode error. Unable to bind the request body. ")
+	RecordCreateError          = errors.New("Failed to Create Record ")
+	RecordUpdateError          = errors.New("Failed to Update Record ")
+	RecordDeleteError          = errors.New("Failed to Delete Record ")
+	FindAuthorError            = errors.New("Failed to Find Authors with Books ")
+	OpenDBError                = errors.New("Can not Open Database ")
+	GetSQLDBError              = errors.New("Can not Get SQL Database ")
+	PingSQLDBError             = errors.New("Something Went Wrong Ping SQL Database ")
+	OpenFileError              = errors.New("Something Went Wrong Opening File ")
+	JsonUnmarshalError         = errors.New("Something Went Wrong Unmarshal Json ")
+	NotFound                   = errors.New("Record Not Found ")
+	ConvertIdError             = errors.New("Id must be uint, can not convert id string to int ")
+	CSVReadError               = errors.New("Something Went Wrong Reading CSV ")
+	ENVFileError               = errors.New("Error Loading .env File ")
+	FirstNameValidationError   = errors.New("first_name field is required, it can not be empty ")
+	LastNameValidationError    = errors.New("last_name field is required, it can not be empty ")
+	EmailValidationError       = errors.New("email field is required, it can not be empty ")
+	GenderValidationError      = errors.New("gender field is required, it can not be empty ")
+	NameValidationError        = errors.New("name field is required, it can not be empty ")
+	PriceValidationError       = errors.New("price field is required, it can not be empty ")
+	PublishTimeValidationError = errors.New("publishTime field is required, it can not be empty ")
+	ISBNValidationError        = errors.New("isbn field is required, it can not be empty ")
+	StockCodeValidationError   = errors.New("stockCode field is required, it can not be empty ")
+	AuthorIdValidationError    = errors.New("authorId field is required, it can not be less than 1 ")
+	PageNumberValidationError  = errors.New("pageNumber field is required, it can not be less than 1 ")
+	StockNumberValidationError = errors.New("stockNumber field is required, it can not be less than 1 ")
+)
